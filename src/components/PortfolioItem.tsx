@@ -30,7 +30,7 @@ export default class PortfolioItem extends React.Component<
         <div className="mt-1 row">
           <div className="col text-center">
             {this.props.tags.map(tag => (
-              <span className="p-1 text-secondary">{tag}</span>
+              <span key={tag} className="p-1 text-secondary">{tag}</span>
             ))}
           </div>
         </div>

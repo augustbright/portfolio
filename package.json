@@ -22,13 +22,15 @@
     "bootstrap": "^4.4.1",
     "next": "^9.2.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-scroll": "^1.7.16"
   },
   "devDependencies": {
     "@types/next": "^9.0.0",
     "@types/node": "^13.1.8",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
+    "@types/react-scroll": "^1.5.4",
     "@zeit/next-sass": "^1.0.1",
     "node-sass": "^4.13.1",
     "typescript": "^3.7.5"

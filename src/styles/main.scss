@@ -1,11 +1,35 @@
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .page-section {
-    min-height: 100vh;
-    padding-top: 60px;
-    padding-bottom: 60px;
+  min-height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.min-height-70 {
+  min-height: 70px;
+}
+
+.navbar {
+  background: white;
+  height: 45px;
+
+  > .nav-border {
+    position: absolute;
+    bottom: 0px;
+    height: 1px;
+    width: 0%;
+    background-color: #6c757d;
+    transition: width 0.2s ease-out;
+  }
+
+  &.nav-fixed {
+    > .nav-border {
+      width: 100%;
+    }
+  }
 }
