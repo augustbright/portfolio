@@ -23,13 +23,26 @@ html {
     bottom: 0px;
     height: 1px;
     width: 0%;
+    opacity: 0;
     background-color: #6c757d;
-    transition: width 0.2s ease-out;
+    transition: width 0.2s ease-out, opacity 0.2s ease-out;
+  }
+
+  > .ab-brand {
+    position: absolute;
+    left: 20px;
+    opacity: 0;
+    box-shadow: none !important;
   }
 
   &.nav-fixed {
     > .nav-border {
       width: 100%;
+      opacity: 1;
+    }
+
+    > .ab-brand {
+      opacity: 1;
     }
   }
 }

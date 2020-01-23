@@ -35,13 +35,11 @@ export default class Header extends React.Component<
         </div>
         <div className="row justify-content-center">
           <div className="col-auto">
-            <h2 className="text-secondary subheading">
-              A Humble React.js Developer
-            </h2>
+            <h2 className="text-secondary subheading">A React.js Developer</h2>
           </div>
         </div>
         <div className="row justify-content-center min-height-70">
-          <div className="col">
+          <div className="col p-0">
             <ViewportWatcher>
               {({ isTopAbove }) => (
                 <nav
@@ -49,6 +47,12 @@ export default class Header extends React.Component<
                     isTopAbove ? "fixed-top nav-fixed" : ""
                   }`}
                 >
+                  <a
+                    className={`${isTopAbove ? '' : 'd-none'} btn nav-brand btn-lg text-uppercase ab-brand font-weight-bold text-secondary`}
+                    href="#"
+                  >
+                    augustbright
+                  </a>
                   <ul className="nav">
                     <li className="nav-item">
                       <a href="#portfolio">My works</a>
