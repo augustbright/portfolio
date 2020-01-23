@@ -1,7 +1,16 @@
-import React from 'react';
+import React from "react";
+import Header from "../components/Header";
+import Portfolio from "../components/Portfolio";
+import ContactMe from "../components/ContactMe";
 
 export default class Index extends React.Component {
-    render() {
-        return <div>...uhm, hello?</div>
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <Header />
+        <Portfolio />
+        <ContactMe />
+      </React.Fragment>
+    );
+  }
 }
