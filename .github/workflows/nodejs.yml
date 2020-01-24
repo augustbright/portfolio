@@ -9,6 +9,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Clone page repository
+      uses: actions/checkout@v2
+      with:        
+        repository: augustbright/augustbright.github.io
+        ref: master
+        token: ${{secrets.page_repo_token}}
+        path: ./page      
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
@@ -20,10 +27,3 @@ jobs:
         npm run deploy
       env:
         CI: true
-    - name: Clone page repository
-      uses: actions/checkout@v2
-      with:        
-        repository: augustbright/augustbright.github.io
-        ref: master
-        token: ${{secrets.page_repo_token}}
-        path: ../page
