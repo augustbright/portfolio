@@ -15,7 +15,9 @@ jobs:
         repository: augustbright/augustbright.github.io
         ref: master
         token: ${{secrets.page_repo_token}}
-        path: ./page      
+        path: ./page
+    - run: cd page && git commit -m "empty" --allow-empty && git push origin
+
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
