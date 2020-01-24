@@ -20,5 +20,10 @@ jobs:
         npm run deploy
       env:
         CI: true
-    - name: testing git
-      run: git clone git@github.com:augustbright/augustbright.github.io.git
+    - name: Clone page repository
+      uses: actions/checkout@v2
+      with:        
+        repository: augustbright/augustbright.github.io
+        ref: master
+        token: ${{secrets.page_repo_token}}
+        path: ../page
