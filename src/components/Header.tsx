@@ -49,8 +49,8 @@ export default class Header extends React.Component<
                 >
                   <a
                     className={`${
-                      isTopAbove ? "" : "d-none"
-                    } btn nav-brand btn-lg text-uppercase ab-brand font-weight-bold text-secondary`}
+                      isTopAbove ? "d-md-inline" : ""
+                    } d-none btn nav-brand btn-lg text-uppercase ab-brand font-weight-bold text-secondary`}
                     href="#"
                   >
                     augustbright
