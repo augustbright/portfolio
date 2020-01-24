@@ -1,5 +1,5 @@
 import React from "react";
-import ViewportWatcher from "./ViewportWatcher";
+import Scrollable from "@augustbright/react-scrollable";
 
 interface IHeaderProps {}
 
@@ -40,7 +40,7 @@ export default class Header extends React.Component<
         </div>
         <div className="row justify-content-center min-height-70">
           <div className="col p-0">
-            <ViewportWatcher>
+            <Scrollable>
               {({ isTopAbove }) => (
                 <nav
                   className={`navbar justify-content-center p-0 ${
@@ -48,7 +48,9 @@ export default class Header extends React.Component<
                   }`}
                 >
                   <a
-                    className={`${isTopAbove ? '' : 'd-none'} btn nav-brand btn-lg text-uppercase ab-brand font-weight-bold text-secondary`}
+                    className={`${
+                      isTopAbove ? "" : "d-none"
+                    } btn nav-brand btn-lg text-uppercase ab-brand font-weight-bold text-secondary`}
                     href="#"
                   >
                     augustbright
@@ -65,7 +67,7 @@ export default class Header extends React.Component<
                   <div className="nav-border"></div>
                 </nav>
               )}
-            </ViewportWatcher>
+            </Scrollable>
           </div>
         </div>
       </section>
