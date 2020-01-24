@@ -31,7 +31,7 @@ jobs:
       working-directory: ./page
       run: |
         shopt -s extglob
-        rm -rf !(.git)
+        rm -rf !(.git|.|..)
     - name: Copying new files to page repository
       run: cp -a ./out/. ./page/
     - name: Pushing changes to page repository
