@@ -36,7 +36,7 @@ export default class PortfolioItem extends React.Component<
         </div>
         <div className="mt-2 row justify-content-center">
             <div className="col-auto">
-                <a className="btn btn-link btn-lg text-uppercase" href={this.props.url} target="_blank">Visit &gt;&gt;</a>
+                <a className="btn btn-link btn-lg text-uppercase" href={this.props.url} target="_blank">View &gt;&gt;</a>
             </div>
         </div>
       </div>

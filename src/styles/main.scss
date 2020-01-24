@@ -1,4 +1,9 @@
 @import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+$fa-font-path: "/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+
+$navbar-height: 45px;
 
 html {
   scroll-behavior: smooth;
@@ -16,7 +21,7 @@ html {
 
 .navbar {
   background: white;
-  height: 45px;
+  height: $navbar-height;
 
   > .nav-border {
     position: absolute;
@@ -45,4 +50,31 @@ html {
       opacity: 1;
     }
   }
+}
+
+.portfolio-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #292d32;
+}
+
+.portfolio-frame {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - #{$navbar-height});
+  margin-top: $navbar-height;
+  border: none;
+
+  &.portfolio-mobile {
+    max-width: 375px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.disable-shadow {
+  box-shadow: none !important;
 }

@@ -1,18 +1,8 @@
 import React from "react";
 import Scrollable from "@augustbright/react-scrollable";
+import Navbar from "./Navbar";
 
-interface IHeaderProps {}
-
-interface IHeaderState {}
-
-export default class Header extends React.Component<
-  IHeaderProps,
-  IHeaderState
-> {
-  constructor(props: IHeaderProps) {
-    super(props);
-  }
-
+export default class Header extends React.Component {
   render() {
     return (
       <section
@@ -42,19 +32,7 @@ export default class Header extends React.Component<
           <div className="col p-0">
             <Scrollable>
               {({ isTopAbove }) => (
-                <nav
-                  className={`navbar justify-content-center p-0 ${
-                    isTopAbove ? "fixed-top nav-fixed" : ""
-                  }`}
-                >
-                  <a
-                    className={`${
-                      isTopAbove ? "d-md-inline" : ""
-                    } d-none btn nav-brand btn-lg text-uppercase ab-brand font-weight-bold text-secondary`}
-                    href="#"
-                  >
-                    augustbright
-                  </a>
+                <Navbar fixed={isTopAbove}>
                   <ul className="nav">
                     <li className="nav-item">
                       <a href="#portfolio">My works</a>
@@ -64,8 +42,7 @@ export default class Header extends React.Component<
                       <a href="#contact">Contact Me</a>
                     </li>
                   </ul>
-                  <div className="nav-border"></div>
-                </nav>
+                </Navbar>
               )}
             </Scrollable>
           </div>

@@ -10,7 +10,7 @@ export default class Portfolio extends React.Component {
             <PortfolioItem
               heading="A design studio landing"
               imageURL="/img/portfolio/interior.png"
-              url="https://interior-yar.herokuapp.com/"
+              url="/interior"
               tags={["Next.js", "Bootstrap", "Typescript"]}
             />
           </div>
