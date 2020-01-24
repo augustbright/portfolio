@@ -16,14 +16,12 @@ jobs:
         ref: master
         token: ${{secrets.page_repo_token}}
         path: ./page
-    - run: | 
-        cd page 
-        git config --global user.email "vtumanov782@gmail.com"
-        git config --global user.name "Github Action"
-
-        git commit -m "empty" --allow-empty 
-        git push origin
-
+    - run: cd page 
+    - run: git config --global user.email "vtumanov782@gmail.com"
+    - run: git config --global user.name "Github Action"
+    - run: git commit -m "empty" --allow-empty
+    - run: git push origin
+    - run: cd ../
 
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
