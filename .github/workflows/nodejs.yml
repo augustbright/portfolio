@@ -28,10 +28,10 @@ jobs:
         token: ${{secrets.page_repo_token}}
         path: ./page
     - name: Cleaning up page directory
-        working-directory: ./page
-        run: |
-          shopt -s extglob
-          rm -rf !(.git)
+      working-directory: ./page
+      run: |
+        shopt -s extglob
+        rm -rf !(.git)
     - name: Copying new files to page repository
       run: cp -a ./out/. ./page/
     - name: Pushing changes to page repository
