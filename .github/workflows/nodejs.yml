@@ -21,4 +21,4 @@ jobs:
       env:
         CI: true
     - name: testing git
-      run: git && exit 0
+      run: git clone git@github.com:augustbright/augustbright.github.io.git
