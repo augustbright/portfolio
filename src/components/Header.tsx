@@ -20,7 +20,7 @@ export default class Header extends React.Component<
         id="page-top"
       >
         <div className="row justify-content-center">
-          <div className="col-2">
+          <div className="col-4 col-md-2">
             <img
               className="img-fluid rounded-circle"
               src="/img/photo.jpg"
