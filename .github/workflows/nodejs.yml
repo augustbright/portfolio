@@ -16,11 +16,8 @@ jobs:
         ref: master
         token: ${{secrets.page_repo_token}}
         path: ./page
-    - run: dir 
-    - run: cd page 
-    - run: dir
-    - run: cd page 
-    - run: dir
+    - working-directory: ./page
+      run: dir
     - run: git config --global user.email "vtumanov782@gmail.com"
     - run: git config --global user.name "Github Action"
     - run: git commit -m "empty" --allow-empty
