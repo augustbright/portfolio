@@ -11,7 +11,7 @@ export default class ContactMe extends React.Component {
                 </div>
                 <div className="row justify-content-center">
                     <div className="col-auto font-weight-bold">
-                        <a href="mailto:vtumanov782@gmail.com">vtumanov782@gmail.com</a>
+                        <a href="mailto:vtumanov782@gmail.com">augustbright@yandex.ru</a>
                     </div>
                 </div>
             </section>
